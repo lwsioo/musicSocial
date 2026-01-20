@@ -1,29 +1,36 @@
-# 🎤 MCNetwork - Technical Documentation (Phase 0)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## 🏗️ Tech Stack & Architettura
-Questo documento riassume le scelte tecniche effettuate per lo sviluppo della WebApp MCNetwork.
+## Getting Started
 
-### 1. Front-end: **Next.js**
-- **Perché:** Offre Rendering lato server (SSR) per una velocità massima e una SEO ottimale. Essenziale per la condivisione dei profili MC e delle battle.
-- **Utilizzo:** Gestirà tutta l'interfaccia utente, dalla Training Room al Feed.
+First, run the development server:
 
-### 2. Back-end: **Node.js + Express**
-- **Perché:** Estremamente veloce nella gestione di richieste asincrone (notifiche, rating in tempo reale).
-- **Utilizzo:** Gestirà la logica di business, le votazioni (1-5 stelle) e la comunicazione con il Database.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-### 3. Database: **PostgreSQL (via Supabase o Neon.tech)**
-- **Perché:** Database relazionale robusto. Indispensabile per gestire classifiche, W/L Ratio e relazioni complesse tra MC e Produttori.
-- **Alternativa:** Inizialmente si userà il piano gratuito di **Supabase** per facilità di setup.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### 4. Media Storage (Video/Audio)
-- **Scelta Professionale:** Amazon S3 con CloudFront (CDN).
-- **Scelta Iniziale (Alternativa Free/Easy):** **Cloudinary**.
-  - **Perché:** Offre un piano gratuito generoso. Gestisce automaticamente la trasformazione dei video (es. ridimensionamento per il feed verticale) e ha una CDN integrata per caricamenti istantanei in tutta Italia.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
----
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 🛠️ Come configurare l'ambiente (Quick Start)
+## Learn More
 
-1. **Inizializzazione Project:**
-   ```bash
-   npx create-next-app@latest mcnetwork
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
